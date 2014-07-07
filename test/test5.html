@@ -1,0 +1,146 @@
+<html>
+<head>
+	<meth charset='utf-8'>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+// function Person (name, blog) {
+// 	this.name = name;
+// 	this.blog = blog;
+// }
+
+// Person.prototype = {
+// 	getName: function() {
+// 		return this.name;
+// 	},
+// 	getBlog: function() {
+// 		return this.blog;
+// 	}
+// };
+
+// var seo = new Person('seo', 'dec7');
+// var son = new Person('son', 'heidie');
+
+// console.log(seo.getName());
+// console.log(seo.getBlog());
+// console.log(son.getName());
+// console.log(son.getBlog());
+
+// Person.prototype.introduce = function() {
+// 	console.log('my name is ' + this.name + ' and my blog is ' + this.blog);
+// }
+
+
+// console.log(seo.introduce());
+// console.log(son.introduce());
+
+
+// Person.prototype.gender = 'male';
+// console.log(seo.gender);
+// console.log(son.gender);
+
+// son.gender = 'female';
+// console.log(seo.gender);
+// console.log(son.gender);
+
+// console.log(Person);
+
+
+
+// function Person() {};
+// Person.prototype.gender = 'male';
+// var seo = new Person(), son = new Person();
+// console.log(seo.gender);
+// console.log(son.gender);
+
+// son.gender = 'female';
+// console.log(seo.gender);
+// console.log(son.gender);
+
+// Person.prototype.gender = 'female';
+// console.log(seo.gender);
+// console.log(son.gender);
+
+
+
+
+
+// function Car() {
+// 	this.wheel = 4;
+// 	this.beep = 'beep';
+// }
+
+// Car.prototype.go = function () {
+// 	console.log(this.beep);
+// }
+
+
+// function Truck () {
+// 	this.wheel = 6;
+// 	this.beep = 'honk';
+// }
+
+// Truck.prototype = new Car();
+
+
+// function Jeep () {
+// 	this.beep = 'wank';
+// }
+// Jeep.prototype = new Car();
+
+
+// var truck = new Truck(), jeep = new Jeep();
+// console.log(truck.wheel + ',  ' + truck.beep);
+// console.log(truck.go());
+// console.log('\n');
+// console.log(jeep.wheel + ',  ' + jeep.beep);
+// console.log(jeep.go());
+
+
+
+function Person (name, blog) {
+	this.name = name;
+	this.blog = blog;
+}
+
+
+Person.prototype.getName = function() {
+	return this.name;
+};
+
+Person.prototype.getBlog = function() {
+	return this.blog;
+};
+
+
+var man = new Person('heidie', 'dec7');
+for (var prop in man) {
+	console.log('man[' + prop + ']: ' + man[prop]);
+}
+
+console.log('\n');
+for (var prop in man) {
+	if (man.hasOwnProperty(prop)) {
+		console.log('man[' + prop + ']: ' + man[prop]);		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

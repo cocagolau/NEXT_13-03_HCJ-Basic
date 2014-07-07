@@ -1,0 +1,236 @@
+body {font-size:12px; font-family:'돋움',dotum,Helvetica,sans-serif; margin:0px; padding:0px;}
+/*header-height:45px */
+
+/* footer */
+footer {position:fixed; bottom:0px; background-color:rgba(33,37,37,0.85); width:100%; height:19px; visibility:visible; border-bottom:1px solid #313131;}
+footer>div {width:200px; margin:auto; text-align:center;}
+footer #dec7 {position:absolute; bottom:0px; margin-left:65px; color:#FFFFFF; font-size:1.3em; font-style:thin; }
+
+/* test */
+.test { border:1px solid #3F6CAF; }
+#journals>.journal > div {
+	/*width:5%; height:5%;*/
+	/*background-color: #3F6CAF;*/
+	display: inline-block;
+	margin:0px;
+	padding:0px;
+	/*border:1px solid #3F6CAF;*/
+}
+#journals .aaa {
+	width:8%; height:10%;
+	background-color: #BAC5C5;
+	position:relative;
+	left:10px; top:10px;
+
+}
+
+#journals .abso1 {
+	position: absolute;
+	width:200px; height:200px;
+	left:200px; top:100px;
+	background-color: #3F6CAF;
+}
+#journals .abso2 {
+	position: absolute;
+	width:200px; height:200px;
+	left:800px; top:150px;
+	background-color: #3F6CAF;
+}
+#journals .abso3 {
+	position: absolute;
+	width:200px; height:200px;
+	left:500px; top:400px;
+	background-color: #3F6CAF;
+}
+
+
+
+
+
+/* statusBar */
+header {
+	width:100%; height:44px; 
+	background-color:#313131; color:#D0D0D0;
+	border-bottom:1px solid #D0D0D0; 
+	visibility:visible; z-index:200;
+}
+header a { color:#D0D0D0; text-decoration: none; }
+#statusBar {
+	position:absolute; width:96%; height:40px;
+	margin-left:2%; margin-top:2px;
+}
+#logo {
+	float:right; margin-top:8px;
+	font-size:2.2em;
+}
+#journalLogo {
+	float:left; margin-top:6px;
+	font-size:2.5em;
+}
+#section {
+	float:left; margin-left:20px; margin-top:13px;
+	font-size:1.8em;
+}
+#date {
+	position:absolute;
+	width:150px;
+	left:50%;
+	margin-left:-90px;
+	margin-top:13px;
+	/*margin:13px auto 0px auto;*/
+	font-size:1.8em;
+}
+#version {
+	float:right; margin-right:10px; margin-top:15px;
+	font-size:1.5em;
+}
+#issue {
+	float:right; margin-right:3%; margin-top:15px;
+	font-size:1.5em;
+}
+/* 1000px 미만시 issue 삭제 */
+@media all and (max-width:999px) {
+	#version {
+		margin-right:3%;
+	}
+	#issue {
+		position:absolute; top:-100%;
+	}
+}
+
+
+/* container */
+#container { padding-top:5px;}
+
+/* journal */
+#journals > .journal {
+	position:absolute;
+	width:92%;
+	height:590px;
+	/*min-height:590px;*/
+	margin-left:3%;
+	background-color:#F9F9F9;
+	border-radius:10px;
+	border-top:1px solid #D0D0D0;
+	border-left:1px solid #D0D0D0;
+	border-right:1px solid #BAC5C5;
+	border-bottom:2px solid #BAC5C5;
+	/*padding:10px;*/
+	padding-bottom:10px;
+	padding-right:10px;
+}
+/* 800px 이상시 3.2% */
+@media all and (min-width:800px) {
+	#journals > .journal {
+		margin-left:3.2%;
+	}
+}
+/* 1024px 이상시 3.5% */
+@media all and (min-width:1024px) {
+	#journals > .journal {
+		margin-left:3.5%;
+	}
+}
+/* 1200px 이상시 3.6% */
+@media all and (min-width:1200px) {
+	#journals > .journal {
+		margin-left:3.6%;
+	}
+}
+/* 1400px 이상시 3.7% */
+@media all and (min-width:1400px) {
+	#journals > .journal {
+		margin-left:3.7%;
+	}
+}
+
+#journals > .newleft { left:-200%; }
+#journals > .left { left:-100%; }
+#journals > .middle { left:0%; }
+#journals > .right { left:100%; }
+#journals > .newright { left:200%; }
+
+
+
+/* section */
+
+section > h1 {
+	margin-left:10%; margin-top:10px;
+	font-size:1.8em; color:#313131;
+}
+
+
+
+/* article */
+/*article {
+	display:inline-block; border:1px solid #D0D0D0;
+	margin-left:10px; margin-top:10px;
+	padding:10px; color:#313131;
+}*/
+
+article {
+	position:relative; display:inline-block;	
+	margin-left:10px; margin-top:10px; padding:10px 10px 10px 10px;
+	border:1px solid #D0D0D0; color:#313131;
+	vertical-align:top;
+}
+article > h1 {
+	display:-webkit-box;
+	-webkit-box-orient:vertical;
+	-webkit-line-clamp:2;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	line-height: 140%;
+}
+article > h2 { margin:0px auto; line-height: 130%;}
+article > address { float:right; font-style:italic; line-height: 200%;}
+
+.a1 > h1 { font-size:2em; }
+.a1 > h2 {  font-size:1.6em; width:90%; }
+.a1 > address { font-size:1em;  }
+
+.a2 > h1 { font-size:1.7em; }
+.a2 > h2 {  font-size:1.4em; width:93%; }
+.a2 > address { font-size:0.9em; }
+
+.a3 > h1 { font-size:1.5em; }
+.a3 > h2 {  font-size:1.3em; width:96%;  }
+.a3 > address { font-size:0.9em; }
+
+
+/* controller */
+#controller {
+	position:fixed; z-index:-1;
+	width:98%; margin-left:1%;
+	bottom:46%;
+	font-size:1.6em;
+}
+/* 1024px 이상시  */
+@media all and (min-width:1024px) {
+	#controller {
+		width:97%; margin-left:1.5%;
+	}
+}
+/* 1400px 이상시  */
+@media all and (min-width:1400px) {
+	#controller {
+		width:96%; margin-left:2%;
+	}
+}
+/* 1900px 이상시  */
+@media all and (min-width:1900px) {
+	#controller {
+		width:95%; margin-left:2.5%;
+	}
+}
+
+#controller > a { color:#313131; text-decoration: none; }
+#controller > .left  { float:left;}
+#controller > .right { float:right;}
+
+
+
+
+
+
+

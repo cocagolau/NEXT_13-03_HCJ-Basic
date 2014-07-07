@@ -1,0 +1,147 @@
+<html>
+<head>
+	<meta charset = 'utf-8'>
+</head>
+<body>
+
+<script type="text/javascript">
+
+// function Person () {
+// 	this.name = 'anonymous';
+// 	this.job = 'none';
+// 	this.sayHello = function() {
+// 		console.log('hello. my name is ' + this.name + ', ' + this.job);
+// 	}
+// }
+
+// function Seo () {
+// 	var obj = new Person();
+// 	obj.name = 'seo';
+// 	obj.job = 'dec7';
+// 	return obj;
+// }
+
+// var me = new Seo();
+// me.sayHello();
+
+// console.log (me instanceof Seo);
+// console.log (me instanceof Person);
+
+
+
+
+
+// var person = {
+// 	name : 'anonymous',
+// 	sayHello : function() {
+// 		console.log('hello. my name is ' + this.name);
+// 	}
+// };
+
+// function Son () {
+// 	this.name = 'son';
+// }
+
+// Son.prototype = person;
+// var son = new Son();
+
+// person.sayHello();
+// son.sayHello();
+
+// console.log(son instanceof Son);
+// console.log(son instanceof person);
+
+
+
+
+
+
+
+// function Person () {
+// 	this.name = 'anonymous';
+// 	this.sayHello = function() {
+// 		console.log('hello. my name is ' + this.name);
+// 	};
+// }
+
+// function Seo () {
+// 	this.name = 'seo';
+// }
+// Seo.prototype = new Person();
+
+// var seo = new Seo();
+// var person = new Person();
+
+
+// person.sayHello();
+// seo.sayHello();
+
+// console.log(seo instanceof Seo);
+// console.log(seo instanceof Person);
+
+// console.log(person instanceof Seo);
+// console.log(person instanceof Person);
+
+
+
+
+// function Person() {
+// 	this.name = name;
+// }
+
+// Person.prototype = {
+// 	yell: function () {
+// 		console.log('hello. my name is ' + this.name);
+// 	}
+// };
+
+// var son = Object.create(Person.prototype);
+// son.name = 'heidie';
+// son.yell();
+
+// console.log(son instanceof Person);
+
+
+// var person = {
+// 	yell: function() {
+// 		console.log('hello. my name is ' + this.name);
+// 	}
+// };
+
+// var son = Object.create(person)
+// console.log(Object.getPrototypeOf(son)  === person);
+// console.log(Object.getPrototypeOf(person));
+
+// console.log(person.isPrototypeOf(son));
+// console.log(Object.prototype.isPrototypeOf(person));
+
+// Person.call(son, 'heidie');
+
+
+function Person() {
+	this.name = name;
+}
+
+Person.prototype = {
+	yell: function() {
+		console.log('hello. my name is ' + this.name);
+	}
+};
+
+var son = Object.create(Person.prototype, {name:{value:'heidie', configurable:true, enumerable:true, writable:true}});
+son.yell();
+son.name = 'son';
+son.yell();
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

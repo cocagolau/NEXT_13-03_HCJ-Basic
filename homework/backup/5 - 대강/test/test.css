@@ -1,0 +1,59 @@
+body {font-size:12px; font-family:'돋움',dotum,Helvetica,sans-serif; margin:0px; padding:0px;}
+.test { border:1px solid #3F6CAF; }
+
+
+#container { padding-top:5px;}
+
+#journals {
+	position:relative;
+	left:0%;
+}
+#journals > .jourForm {
+	position: absolute;
+	width:94%;
+}
+#journals > .newleft { left:-50%;}
+#journals > .left { left:-50%;}
+#journals > .middle { left:50%;}
+#journals > .right { left:150%;}
+#journals > .newright { left:250%;}
+
+#journals .journal {
+	position:relative;
+	left:-50.1%;
+	width:99.5%;
+	font-size:3em;
+	
+	min-height:590px;
+	background-color:#F9F9F9;
+	border-radius:10px;
+	border-top:1px solid #D0D0D0;
+	border-left:1px solid #D0D0D0;
+	border-right:2px solid #BAC5C5;
+	border-bottom:2px solid #BAC5C5;
+	/*padding:10px;*/
+}
+
+#controller {
+	position:fixed;
+	top:50%;
+	width:100%;
+	z-index:-1;
+	font-size:1.6em;
+}
+#controller > a { color:#313131; text-decoration: none;}
+#controller > .left  { float:left; margin-left:10px;}
+#controller > .right { float:right; margin-right:10px;}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+
+.Node {
+        /*referenced : http://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/*/
+
+        /*for circle shape*/
+        width: 100px;
+        height: 100px;
+        
+        
+        
+        word-break: break-all;
+        overflow: auto;
+\
+}

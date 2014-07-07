@@ -1,0 +1,198 @@
+<html>
+<body>
+
+<button onclick='javascript:setPending();'>Toggle Pending</button>
+<div id="pending">Pending</div>
+
+<script type="text/javascript">
+	// function outer() {
+	// 	var count = 0;
+	// 	var inner = function() {
+	// 		return ++count;
+	// 	};
+	// 	return inner;
+	// }
+	// var increase = outer();
+
+	// debugger;
+	// console.log(increase());
+	// console.log(increase());
+
+
+
+	// function outer() {
+	// 	var count = 0;
+	// 	return {
+	// 		increase:function() {
+	// 			return ++count;
+	// 		},
+	// 		decrease:function() {
+	// 			return --count;
+	// 		}
+	// 	};
+	// }
+
+	// var counter1 = outer();
+	// console.log(counter1.increase());
+	// console.log(counter1.increase());
+	// console.log(counter1.decrease());
+
+	// var counter2 = outer();
+	// console.log(counter2.increase());
+
+
+	// var countFactory = (function() {
+	// 	var staticCount = 0;
+	// 	return function factory () {
+	// 		var localCount = 0;
+	// 		return {
+	// 			increase: function() {
+	// 				return {
+	// 					static: ++staticCount,
+	// 					local: ++localCount
+	// 					};
+	// 				},
+	// 			decrease: function() {
+	// 				return {
+	// 					static: --staticCount,
+	// 					local: --localCount
+	// 					};
+	// 				}
+	// 			};
+	// 		};
+	// 	}());	
+
+	// var counter = countFactory(), counter2 = countFactory();
+	// console.log(counter.increase());
+	// console.log(counter.increase());
+	// console.log(counter2.decrease());
+	// console.log(counter.increase());
+
+
+
+
+	// var pendingInterval = false;
+	// function setPending () {
+	// 	if (!pendingInterval) {
+	// 		pendingInterval = setInterval(startPending, 500);
+	// 	} else {
+	// 		clearInterval(pendingInterval);
+	// 		pendingInterval = false;
+	// 	}
+	// }
+
+	// function startPending() {
+	// 	var div = document.getElementById('pending');
+	// 	if (div.innerHTML.length>12) {
+	// 		div.innerHTML = 'pending';
+	// 	}
+	// 	div.innerHTML += '.';
+	// }
+
+
+
+	// var setPending = (function() {
+	// 	var pendingInterval = false;
+	// 	var div = document.getElementById('pending');
+
+	// 	function startPending() {
+	// 		if (div.innerHTML.length > 12) {
+	// 			div.innerHTML = 'Pending';
+	// 		}
+	// 		div.innerHTML += '.';
+	// 	}
+
+	// 	return function() {
+	// 		if (!pendingInterval) {
+	// 			pendingInterval = setInterval(startPending,500);
+	// 		} else {
+	// 			clearInterval(pendingInterval);
+	// 			pendingInterval = false;
+	// 		}
+	// 	}
+	// }());
+
+
+
+	// var setPending = function() {
+	// 	var pendingInterval = false;
+	// 	var div = document.getElementById('pending');
+
+	// 	function startPending() {
+	// 		if(div.innerHTML.length > 12) {
+	// 			div.innerHTML = 'Pending';
+	// 		}
+	// 		div.innerHTML += '.';
+	// 	}
+
+	// 	setPending = function() {
+	// 		if (!pendingInterval) {
+	// 			pendingInterval = setInterval(startPending, 500);
+	// 		} else {
+	// 			clearInterval(pendingInterval);
+	// 			pendingInterval = false;
+	// 		}
+	// 	}
+	// 	setPending();
+	// };
+
+
+	//?? http://unikys.tistory.com/308
+
+	function overload(object, functionName, fn, fnMap) {
+		var previousFunction = object[functionName];
+		object[functionName] = function() {
+			if (fn.length === arguments.length) {
+				if (fnMap && fnMap === arguments.length) {
+					for (var i=0; i<arguments.length; i++) {
+						if (fnMap[i] === typeof arguments[i]) {
+							return previousFunction.apply(this, arguments);
+						}
+					}
+					return fn.apply(this, arguments);
+				}
+				return previousFunction.apply(this, arguments);
+			} else if (typeof previousFunction === 'function') {
+				return previousFunction.apply(this, arguments);
+			};
+		};
+	}
+
+	// debugger;
+	var MyFile = {};
+		overload(MyFile.prototype, init, function () {
+			console.log("init as empty file");
+		});
+
+		overload(MyFile.prototype, init, function (fileName) {
+			console.log("init with file name");
+		}, ['string']);
+
+		overload(MyFile.prototype, init, function (file) {
+			console.log("init with file object");
+		}, ['object']);
+
+	var file = new MyFile();
+		file.init();
+		file.init("myfile.txt");
+		file.init(fileObject);
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

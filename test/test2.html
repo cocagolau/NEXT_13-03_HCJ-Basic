@@ -1,0 +1,95 @@
+<html>
+<body>
+	<div id="clickDiv1">click</div>
+	<script>
+	// function say(something) {
+	// 	alert(something);
+	// }
+	// say('ho');
+
+
+
+	// var a = {
+	// 	say : function(something) {
+	// 		alert(something);
+	// 	}
+	// }
+	// a.say('ho');
+
+
+	// function say(something) {
+	// 	alert(something);
+	// }
+	// say.call(undefined, 'ho');
+	// say.apply(undefined, ['ho']);
+
+
+	// function whatsThis() {
+	// 	return this.toString();
+	// }
+	// var a = {
+	// 	what : whatsThis,
+	// 	toString : function () {
+	// 		return '[object a]';
+	// 	}
+	// }
+
+	// whatsThis();
+	// a.what();
+
+	// whatsThis.call();
+	// whatsThis.apply(a);
+
+	// a.what.call(undefined);
+	// a.what.apply(a);
+
+
+	// function argTest() {
+	// 	return arguments;
+	// }
+
+	// argTest();
+	// var args = argTest('a', 'b');
+	// args.length;
+	// args[0] === 'a';
+	// args[1] === 'b';
+	// args.slice(1);
+	// Array.prototype.slice.call(args, 0);
+
+
+
+
+	var clickDiv1 = document.getElementById('clickDiv1');
+	clickDiv1.name = 'world';
+
+	var a = {
+		name : 'a',
+		say : function (e) {
+			console.log(this);
+			alert('hello ' + this.name);
+		}
+	};
+	// clickDiv1.addEventListener('click', a.say.call());
+
+	// var callback = a.say;
+	// var callback = function(e) {
+	// 	a.say();
+	// }
+	// clickDiv1.addEventListener('click', callback);
+
+	// function bind(obj, func) {
+	// 	return function() {
+	// 		func.apply(obj, arguments);
+	// 	};
+	// }
+	// clickDiv1.addEventListener('click', bind(a, a.say));
+
+	function yell() {
+		alert('hello ' + this.name)
+	}
+	clickDiv1.addEventListener('click', yell.bind(a));
+
+
+</script>
+</body>
+</html>

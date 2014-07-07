@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="rolling.js"></script>
+        <link rel="stylesheet" type="text/css" href="http://ui.nhnnext.org/hcj/reset.css">
+        <style>
+            #canvas {
+                overflow:hidden;
+                position:relative;
+                border : 1px solid black;
+                width : 500px;
+                height : 400px;
+                margin : 100px auto;
+            }
+
+            #canvas > ul {
+                position:absolute;
+                border : 1px solid red;
+                /*left:0px;*/
+                height : 400px;
+                width : 1506px;
+                line-height: 400px;
+            }
+
+            #canvas ul li {
+                width : 500px;
+                float : left;
+                border : 1px solid black;
+                text-align: center;
+            }
+
+            #controller {
+                margin : 50px auto;
+                text-align: center;
+            }
+
+        </style>
+    </head>
+    <body>
+        <section id="canvas">
+            <ul id="list">
+                <li>프랑스</li>
+                <li>호주</li>
+                <li>이스라엘</li>
+            </ul>
+        </section>
+
+        <section id="controller">
+            <button id="left">좌로이동</button>
+            <button id="right">우로이동</button>
+        </section>
+
+    </body>
+</html>

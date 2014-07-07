@@ -1,0 +1,21 @@
+#container > .controller {  /* 없는 경우 event가 인지 못함 ...*/
+	position: fixed;
+	top:0px;
+	height:100%; width:100%;
+}
+#container > .left {
+	left:0px;
+}
+#container > .right {
+	right:0px;
+}
+#container > .inner  {
+	background-color:rgba(37,37,37,0.7);
+	width:4%;
+	z-index: 150;
+}
+#container > .outer  {
+	background-color:rgba(42,82,152,0.7);
+	width:3%;
+	z-index: 150;
+}
